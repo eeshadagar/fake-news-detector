@@ -2,5 +2,5 @@ Django
 gunicorn
 whitenoise
 pandas
-sklearn
+scikit-learn
 os
