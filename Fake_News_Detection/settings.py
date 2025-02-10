@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,9 +27,9 @@ SECRET_KEY = 'django-insecure-62&@*xc5ec9io*r4jz@mlkk=cci(njt1^e&@270h407*(fjl+r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'fake-news-detector-4tdz.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'fake-news-detector.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://fake-news-detector-4tdz.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://fake-news-detector.herokuapp.com']
 
 
 # Application definition
@@ -125,6 +126,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,"static"),
 ]
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
