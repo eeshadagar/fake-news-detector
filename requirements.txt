@@ -1,0 +1,6 @@
+Django
+gunicorn
+whitenoise
+pandas
+sklearn
+os
