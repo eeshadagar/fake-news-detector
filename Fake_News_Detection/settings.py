@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-62&@*xc5ec9io*r4jz@mlkk=cci(njt1^e&@270h407*(fjl+r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["fake-news-detection.onrender.com"]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'fake-news-detector-4tdz.onrender.com']
 
+CSRF_TRUSTED_ORIGINS = ['https://fake-news-detector-4tdz.onrender.com']
 
 
 # Application definition
